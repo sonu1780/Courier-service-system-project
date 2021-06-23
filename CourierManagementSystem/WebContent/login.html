@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<header>
+    
+    <nav>
+      <div class="logo"><img alt="this is logo" src="icon.jpg" width="150" height="90">
+   </div>
+            <div class="menu">
+              <a href="index.html">Home</a>
+              <a href="login.html">services</a>
+              <a href="au.html">About us</a>
+              <a href="contactus.html">contact us</a>
+            </div>
+        </nav>
+    
+       </header>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>courier management system</title>
+
+<style>
+body{
+  margin: 0;
+  padding:0;
+  background-image: url('hello.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login-card{
+margin: 0;
+padding: 0;
+position: absolute;
+top: 15%;
+  left: 60%;
+  }
+
+.login-card h1{
+margin: 0;
+padding: 0;
+}
+</style>
+<link rel="stylesheet" type="text/css"href="stylelogin.css" />
+
+<script type="text/javascript">
+
+  function validate()
+  {
+    var UserName=document.getElementById('UserName');
+    var Password=document.getElementById('Password');
+
+    if (UserName.value.trim()=="")
+    {
+      alert("Blank UserName");
+      
+      return false;
+    }
+      else if (Password.value.trim()=="")
+    {
+      alert("Blank Password");
+      return false;
+    }
+    else if (Password.value.trim().length<5)
+    {
+      alert("Password is too short");
+      return false;
+    }
+    else{
+      return true;
+    }
+
+  }
+  
+</script>
+
+
+
+</head>
+
+<body>
+<br />
+<br />
+
+<div class="login-card">
+<div class="log_head">
+<h1>LOGIN</h1>
+<img src="lock.png" alt="lock" class="lock" />
+</div>
+
+<div class="log_body">
+<form onsubmit="return validate()"; 
+action="LoginServlet" method="post">
+ <table width="200" border="0" align="center">
+  <tr>
+  <td>
+    <select name="type" class="log_type">
+    <option value="" disabled selected hidden>Are you a Customer or an Employee?</option>
+    <option value="Customer">Customer</option>
+    <option value="Employee">Employee</option>
+    </select>
+    </td>
+   </tr>
+   <td>&nbsp;</td>
+  
+  <tr>
+ 
+    <td><input id="UserName" placeholder="UserName" type="text" name="loginid" class="log_user" ></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><input id="Password" placeholder="Password" type="password" name="pass" class="log_Pass"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+  <td><input name="remember" type="checkbox" value="Remember Me"> Keep me logged in</td>
+  </tr>
+  <tr>
+  <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><input type="submit" name="login" class="login-submit" value="SIGN IN"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td>Don't have an account ? <a href="signup.html" rel="register">Sign Up</a></td>
+  </tr>
+</table>
+
+</form> 
+</div>
+
+</div>
+
+<footer class="footer-distributed">
+
+			<div class="footer-left">
+          <img src=" icon.jpg" width="50" height="50">
+				<h3>About<span> Project</span></h3>
+
+				<p class="footer-links">
+					<a href="index.html">Home</a>
+					|
+					<a href="#">Service</a>
+					|
+					<a href="au.html">About</a>
+					|
+					<a href="contactus.html">Contact</a>
+				</p>
+
+				<p class="footer-company-name">© 2021 Courier services Pvt. Ltd.</p>
+			</div>
+
+			<div class="footer-center">
+				<div>
+					<i class="fa fa-map-marker"></i>
+					  <p><span>	K L Deemed to be University,
+                           Green Fields,
+                           Guntur. 
+                           </span>
+						   vijaywada, Andhra Pradesh- 522502</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+91 22-27782183</p>
+				</div>
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@deliveryservices.com">support@deliveryservices.com</a></p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p class="footer-company-about">
+					<span>Connect with Us</span>
+					We offer training and skill building courses across Technology, Design, Management, Science and Humanities.</p>
+				<div class="footer-icons">
+					<a href="https://www.facebook.com/"><i class="fa fa-facebook"><img src="facebook.png" width="40" height="40"></i></a> &nbsp;
+					<a href="https://twitter.com/login?lang=en"><i class="fa fa-twitter"></i><img src="twitter.png" width="40" height="40"></a> &nbsp;
+					<a href="https://www.instagram.com/accounts/login/"><i class="fa fa-instagram"><img src="Instagram.png" width="40" height="40"></i></a> &nbsp;
+					<a href="https://www.linkedin.com/login"><i class="fa fa-linkedin"><img src="linkdin.png" width="40" height="40"></i></a> &nbsp;
+					<a href="https://www.youtube.com"><i class="fa fa-youtube"><img src="youtube.png" width="40" height="40"></i></a> &nbsp;
+				</div>
+			</div>
+		</footer>
+</body>
+</html>
